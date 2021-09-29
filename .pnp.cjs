@@ -42,6 +42,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:12.20.27"],
             ["@types/react", "npm:17.0.24"],
             ["@types/react-dom", "npm:17.0.9"],
+            ["husky", "npm:7.0.2"],
+            ["prettier", "npm:2.4.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:17.0.2"],
             ["react-scripts", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:4.0.3"],
@@ -11272,6 +11274,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["husky", [
+        ["npm:7.0.2", {
+          "packageLocation": "./.yarn/cache/husky-npm-7.0.2-f2a671a0c6-2ccfe6ddc5.zip/node_modules/husky/",
+          "packageDependencies": [
+            ["husky", "npm:7.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["iconv-lite", [
         ["npm:0.4.24", {
           "packageLocation": "./.yarn/cache/iconv-lite-npm-0.4.24-c5c4ac6695-bd9f120f5a.zip/node_modules/iconv-lite/",
@@ -15883,6 +15894,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["prettier", [
+        ["npm:2.4.1", {
+          "packageLocation": "./.yarn/cache/prettier-npm-2.4.1-623aac91ee-cc6830588b.zip/node_modules/prettier/",
+          "packageDependencies": [
+            ["prettier", "npm:2.4.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["pretty-bytes", [
         ["npm:5.6.0", {
           "packageLocation": "./.yarn/cache/pretty-bytes-npm-5.6.0-0061079c9f-9c082500d1.zip/node_modules/pretty-bytes/",
@@ -17519,6 +17539,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:12.20.27"],
             ["@types/react", "npm:17.0.24"],
             ["@types/react-dom", "npm:17.0.9"],
+            ["husky", "npm:7.0.2"],
+            ["prettier", "npm:2.4.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:17.0.2"],
             ["react-scripts", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:4.0.3"],
