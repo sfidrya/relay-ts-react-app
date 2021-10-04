@@ -63,8 +63,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-relay", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:12.0.0"],
             ["react-scripts", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:4.0.3"],
             ["relay-compiler", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:12.0.0"],
-            ["relay-compiler-language-typescript", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:14.1.2"],
+            ["relay-compiler-language-typescript", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:14.2.0"],
             ["relay-config", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:12.0.0"],
+            ["relay-runtime", "npm:12.0.0"],
             ["sass", "npm:1.42.1"],
             ["typescript", "patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=32657b"],
             ["web-vitals", "npm:1.1.2"]
@@ -18687,24 +18688,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["relay-compiler-language-typescript", [
-        ["npm:14.1.2", {
-          "packageLocation": "./.yarn/cache/relay-compiler-language-typescript-npm-14.1.2-ee4e60ab98-2faf1ff616.zip/node_modules/relay-compiler-language-typescript/",
+        ["npm:14.2.0", {
+          "packageLocation": "./.yarn/cache/relay-compiler-language-typescript-npm-14.2.0-7155c28738-ae3ed85cfd.zip/node_modules/relay-compiler-language-typescript/",
           "packageDependencies": [
-            ["relay-compiler-language-typescript", "npm:14.1.2"]
+            ["relay-compiler-language-typescript", "npm:14.2.0"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:14.1.2", {
-          "packageLocation": "./.yarn/__virtual__/relay-compiler-language-typescript-virtual-2e1d57cc0d/0/cache/relay-compiler-language-typescript-npm-14.1.2-ee4e60ab98-2faf1ff616.zip/node_modules/relay-compiler-language-typescript/",
+        ["virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:14.2.0", {
+          "packageLocation": "./.yarn/__virtual__/relay-compiler-language-typescript-virtual-785a5aabf0/0/cache/relay-compiler-language-typescript-npm-14.2.0-7155c28738-ae3ed85cfd.zip/node_modules/relay-compiler-language-typescript/",
           "packageDependencies": [
-            ["relay-compiler-language-typescript", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:14.1.2"],
+            ["relay-compiler-language-typescript", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:14.2.0"],
             ["@types/react-relay", "npm:11.0.2"],
             ["@types/relay-compiler", null],
             ["@types/relay-runtime", "npm:12.0.0"],
             ["@types/typescript", null],
             ["invariant", "npm:2.2.4"],
             ["relay-compiler", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:12.0.0"],
-            ["relay-runtime", null],
+            ["relay-runtime", "npm:12.0.0"],
             ["typescript", "patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=32657b"]
           ],
           "packagePeers": [
@@ -19631,8 +19632,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-relay", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:12.0.0"],
             ["react-scripts", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:4.0.3"],
             ["relay-compiler", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:12.0.0"],
-            ["relay-compiler-language-typescript", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:14.1.2"],
+            ["relay-compiler-language-typescript", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:14.2.0"],
             ["relay-config", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:12.0.0"],
+            ["relay-runtime", "npm:12.0.0"],
             ["sass", "npm:1.42.1"],
             ["typescript", "patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=32657b"],
             ["web-vitals", "npm:1.1.2"]

@@ -13938,9 +13938,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"relay-compiler-language-typescript@npm:^14.1.2":
-  version: 14.1.2
-  resolution: "relay-compiler-language-typescript@npm:14.1.2"
+"relay-compiler-language-typescript@npm:^14.2.0":
+  version: 14.2.0
+  resolution: "relay-compiler-language-typescript@npm:14.2.0"
   dependencies:
     invariant: ^2.2.4
   peerDependencies:
@@ -13949,7 +13949,7 @@ fsevents@^1.2.7:
     relay-compiler: ">=12.0.0"
     relay-runtime: ">=12.0.0"
     typescript: ">=4.2.3"
-  checksum: 2faf1ff6162fbda5499cfa7789b664c59545a2c0540053af3d302f2fd921a5a7012db5bd04606fafe48cc70949a44a6ff8880e400438e4a1bca4a058fa5e2320
+  checksum: ae3ed85cfdabbbb8e8b390ca12249b4220ae5811422c2e424f8bd55bf59840f0d963b8cf092db92315b7daa949d20aafca82fa218dcb9f919796ee1990d363e3
   languageName: node
   linkType: hard
 
@@ -13993,7 +13993,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"relay-runtime@npm:12.0.0":
+"relay-runtime@npm:12.0.0, relay-runtime@npm:^12.0.0":
   version: 12.0.0
   resolution: "relay-runtime@npm:12.0.0"
   dependencies:
@@ -14801,8 +14801,9 @@ resolve@^2.0.0-next.3:
     react-relay: ^12.0.0
     react-scripts: 4.0.3
     relay-compiler: ^12.0.0
-    relay-compiler-language-typescript: ^14.1.2
+    relay-compiler-language-typescript: ^14.2.0
     relay-config: ^12.0.0
+    relay-runtime: ^12.0.0
     sass: ^1.42.1
     typescript: ^4.1.2
     web-vitals: ^1.0.1
