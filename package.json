@@ -30,9 +30,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "yarn run relay && react-scripts start",
-    "build": "yarn run relay && react-scripts build",
-    "test": "react-scripts test",
+    "start": "yarn run relay && craco start",
+    "build": "yarn run relay && craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "format": "prettier --write .",
     "postinstall": "husky install",
@@ -59,9 +59,11 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^6.3.0",
     "@types/react-relay": "^11.0.2",
     "@types/relay-runtime": "^12.0.0",
     "antd": "^4.16.13",
+    "craco-less": "^1.20.0",
     "graphql": "^15.6.0",
     "husky": "^7.0.0",
     "prettier": "2.4.1",

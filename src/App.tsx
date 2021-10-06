@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import { Button } from 'antd';
 import fetchGraphQL from './fetchGraphQL'
 import graphql from 'babel-plugin-relay/macro'
 import {
@@ -10,6 +10,7 @@ import {
 } from 'react-relay/hooks'
 import RelayEnvironment from './RelayEnvironment'
 import { AppRepositoryNameQuery } from './__generated__/AppRepositoryNameQuery.graphql'
+import './App.less'
 
 const { Suspense } = React
 
@@ -51,6 +52,7 @@ function App(props: AppProps) {
   return (
     <div className="App">
       <header className="App-header">
+      <Button type="primary">Button</Button>
         <p>{data.repository?.name}</p>
       </header>
     </div>
