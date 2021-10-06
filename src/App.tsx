@@ -1,32 +1,36 @@
-import React from 'react';
-import './App.css';
-import fetchGraphQL from './fetchGraphQL';
-import graphql from 'babel-plugin-relay/macro';
+import React from 'react'
+import './App.css'
+import fetchGraphQL from './fetchGraphQL'
+import graphql from 'babel-plugin-relay/macro'
 import {
   RelayEnvironmentProvider,
   loadQuery,
   usePreloadedQuery,
   PreloadedQuery,
-} from 'react-relay/hooks';
-import RelayEnvironment from './RelayEnvironment';
-import { AppRepositoryNameQuery } from './__generated__/AppRepositoryNameQuery.graphql';
+} from 'react-relay/hooks'
+import RelayEnvironment from './RelayEnvironment'
+import { AppRepositoryNameQuery } from './__generated__/AppRepositoryNameQuery.graphql'
 
-const { Suspense } = React;
+const { Suspense } = React
 
 // Define a query
 const RepositoryNameQuery = graphql`
   query AppRepositoryNameQuery {
     repository(owner: "facebook", name: "relay") {
-      name
+      name, owner {id}
     }
   }
-`;
+`
 
 // Immediately load the query as our app starts. For a real app, we'd move this
 // into our routing configuration, preloading data as we transition to new routes.
-const preloadedQuery = loadQuery<AppRepositoryNameQuery>(RelayEnvironment, RepositoryNameQuery, {
-  /* query variables */
-});
+const preloadedQuery = loadQuery<AppRepositoryNameQuery>(
+  RelayEnvironment,
+  RepositoryNameQuery,
+  {
+    /* query variables */
+  }
+)
 
 // Inner component that reads the preloaded query results via `usePreloadedQuery()`.
 // This works as follows:
@@ -38,11 +42,11 @@ const preloadedQuery = loadQuery<AppRepositoryNameQuery>(RelayEnvironment, Repos
 //   handling the failure case here.
 
 interface AppProps {
-  preloadedQuery: PreloadedQuery<AppRepositoryNameQuery>;
+  preloadedQuery: PreloadedQuery<AppRepositoryNameQuery>
 }
 
 function App(props: AppProps) {
-  const data = usePreloadedQuery(RepositoryNameQuery, props.preloadedQuery);
+  const data = usePreloadedQuery(RepositoryNameQuery, props.preloadedQuery)
 
   return (
     <div className="App">
@@ -50,7 +54,7 @@ function App(props: AppProps) {
         <p>{data.repository?.name}</p>
       </header>
     </div>
-  );
+  )
 }
 
 // The above component needs to know how to access the Relay environment, and we
@@ -65,7 +69,7 @@ function AppRoot() {
         <App preloadedQuery={preloadedQuery} />
       </Suspense>
     </RelayEnvironmentProvider>
-  );
+  )
 }
 
-export default AppRoot;
+export default AppRoot

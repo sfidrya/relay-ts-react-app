@@ -8760,7 +8760,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"husky@npm:^7.0.2":
+"husky@npm:^7.0.0":
   version: 7.0.2
   resolution: "husky@npm:7.0.2"
   bin:
@@ -14794,7 +14794,7 @@ resolve@^2.0.0-next.3:
     eslint-plugin-react: 7.x
     eslint-plugin-react-hooks: 2.x
     graphql: ^15.6.0
-    husky: ^7.0.2
+    husky: ^7.0.0
     prettier: 2.4.1
     react: ^17.0.2
     react-dom: ^17.0.2

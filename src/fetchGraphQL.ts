@@ -1,5 +1,5 @@
 async function fetchGraphQL(text: unknown, variables?: unknown) {
-  const REACT_APP_GITHUB_AUTH_TOKEN = process.env.REACT_APP_GITHUB_AUTH_TOKEN;
+  const REACT_APP_GITHUB_AUTH_TOKEN = process.env.REACT_APP_GITHUB_AUTH_TOKEN
 
   // Fetch data from GitHub's GraphQL API:
   const response = await fetch('https://api.github.com/graphql', {
@@ -12,10 +12,10 @@ async function fetchGraphQL(text: unknown, variables?: unknown) {
       query: text,
       variables,
     }),
-  });
+  })
 
   // Get the response as JSON
-  return await response.json();
+  return await response.json()
 }
 
-export default fetchGraphQL;
+export default fetchGraphQL

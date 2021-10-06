@@ -8,6 +8,9 @@ export type AppRepositoryNameQueryVariables = {};
 export type AppRepositoryNameQueryResponse = {
     readonly repository: {
         readonly name: string;
+        readonly owner: {
+            readonly id: string;
+        };
     } | null;
 };
 export type AppRepositoryNameQuery = {
@@ -21,6 +24,10 @@ export type AppRepositoryNameQuery = {
 query AppRepositoryNameQuery {
   repository(owner: "facebook", name: "relay") {
     name
+    owner {
+      __typename
+      id
+    }
     id
   }
 }
@@ -45,6 +52,13 @@ v1 = {
   "kind": "ScalarField",
   "name": "name",
   "storageKey": null
+},
+v2 = {
+  "alias": null,
+  "args": null,
+  "kind": "ScalarField",
+  "name": "id",
+  "storageKey": null
 };
 return {
   "fragment": {
@@ -61,7 +75,19 @@ return {
         "name": "repository",
         "plural": false,
         "selections": [
-          (v1/*: any*/)
+          (v1/*: any*/),
+          {
+            "alias": null,
+            "args": null,
+            "concreteType": null,
+            "kind": "LinkedField",
+            "name": "owner",
+            "plural": false,
+            "selections": [
+              (v2/*: any*/)
+            ],
+            "storageKey": null
+          }
         ],
         "storageKey": "repository(name:\"relay\",owner:\"facebook\")"
       }
@@ -87,24 +113,37 @@ return {
           {
             "alias": null,
             "args": null,
-            "kind": "ScalarField",
-            "name": "id",
+            "concreteType": null,
+            "kind": "LinkedField",
+            "name": "owner",
+            "plural": false,
+            "selections": [
+              {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "__typename",
+                "storageKey": null
+              },
+              (v2/*: any*/)
+            ],
             "storageKey": null
-          }
+          },
+          (v2/*: any*/)
         ],
         "storageKey": "repository(name:\"relay\",owner:\"facebook\")"
       }
     ]
   },
   "params": {
-    "cacheID": "91a2d37a28396eb1d7dcf20cc01b3d0d",
+    "cacheID": "04292195da8308abb5898b8e51160816",
     "id": null,
     "metadata": {},
     "name": "AppRepositoryNameQuery",
     "operationKind": "query",
-    "text": "query AppRepositoryNameQuery {\n  repository(owner: \"facebook\", name: \"relay\") {\n    name\n    id\n  }\n}\n"
+    "text": "query AppRepositoryNameQuery {\n  repository(owner: \"facebook\", name: \"relay\") {\n    name\n    owner {\n      __typename\n      id\n    }\n    id\n  }\n}\n"
   }
 };
 })();
-(node as any).hash = '9f041295559a43de4cee97435d379fd0';
+(node as any).hash = '10399ab77ea63ee7fcd31610015f1c49';
 export default node;
