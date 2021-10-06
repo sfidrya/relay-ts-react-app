@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'antd';
+import { Button } from 'antd'
 import fetchGraphQL from './fetchGraphQL'
 import graphql from 'babel-plugin-relay/macro'
 import {
@@ -18,7 +18,10 @@ const { Suspense } = React
 const RepositoryNameQuery = graphql`
   query AppRepositoryNameQuery {
     repository(owner: "facebook", name: "relay") {
-      name, owner {id}
+      name
+      owner {
+        id
+      }
     }
   }
 `
@@ -52,7 +55,7 @@ function App(props: AppProps) {
   return (
     <div className="App">
       <header className="App-header">
-      <Button type="primary">Button</Button>
+        <Button type="primary">Button</Button>
         <p>{data.repository?.name}</p>
       </header>
     </div>
