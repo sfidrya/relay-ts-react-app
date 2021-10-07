@@ -39,8 +39,8 @@
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
-    "relay": "relay-compiler $@", 
-    "watch-sass": "yarn nodemon --watch antd.customize.scss --exec \"yarn convert-sass\""
+    "relay": "relay-compiler $@",
+    "watch-sass": "nodemon --watch antd.customize.scss --exec \"yarn convert-sass\" --ext scss"
   },
   "eslintConfig": {
     "extends": [
