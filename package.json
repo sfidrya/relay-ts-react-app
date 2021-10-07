@@ -30,6 +30,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "convert-sass": "sed 's/^\\\\$/@/g' antd.customize.scss > antd.customize.less",
     "start": "yarn run relay && craco start",
     "build": "yarn run relay && craco build",
     "test": "craco test",
