@@ -19,9 +19,6 @@ const RepositoryNameQuery = graphql`
   query AppRepositoryNameQuery {
     repository(owner: "facebook", name: "relay") {
       name
-      owner {
-        id
-      }
     }
   }
 `
@@ -57,7 +54,7 @@ function App(props: AppProps) {
       <header className="App-header">
         <Button type="primary">Button</Button>
         <p>{data.repository?.name}</p>
-        <p>Test change...</p>
+        <p>Test change</p>
       </header>
     </div>
   )

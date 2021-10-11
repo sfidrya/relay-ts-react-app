@@ -31,7 +31,7 @@
   },
   "scripts": {
     "convert-sass": "node sassToLess.js",
-    "start": "yarn run relay && craco start",
+    "start": "concurrently --kill-others \"yarn run relay && craco start\" \"yarn watch-sass\"",
     "build": "yarn run relay && craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
@@ -39,7 +39,7 @@
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
-    "relay": "relay-compiler $@",
+    "relay": "relay-compiler --watch $@",
     "watch-sass": "nodemon --watch antd.customize.scss --exec \"yarn convert-sass && craco start\" --ext scss"
   },
   "eslintConfig": {
@@ -66,6 +66,7 @@
     "@types/relay-runtime": "^12.0.0",
     "antd": "^4.16.13",
     "babel-plugin-import": "^1.13.3",
+    "concurrently": "^6.3.0",
     "craco-antd": "^1.19.0",
     "craco-less": "^1.20.0",
     "graphql": "^15.6.0",
