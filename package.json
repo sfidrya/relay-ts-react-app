@@ -30,7 +30,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "convert-sass": "sed 's/^\\\\$/@/g' antd.customize.scss > antd.customize.less",
+    "convert-sass": "node sassToLess.js",
     "start": "yarn run relay && craco start",
     "build": "yarn run relay && craco build",
     "test": "craco test",
@@ -40,7 +40,7 @@
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
     "relay": "relay-compiler $@",
-    "watch-sass": "nodemon --watch antd.customize.scss --exec \"yarn convert-sass\" --ext scss"
+    "watch-sass": "nodemon --watch antd.customize.scss --exec \"yarn convert-sass && craco start\" --ext scss"
   },
   "eslintConfig": {
     "extends": [

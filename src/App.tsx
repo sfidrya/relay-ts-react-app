@@ -57,6 +57,7 @@ function App(props: AppProps) {
       <header className="App-header">
         <Button type="primary">Button</Button>
         <p>{data.repository?.name}</p>
+        <p>Test change...</p>
       </header>
     </div>
   )
