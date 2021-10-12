@@ -1,1 +1,1 @@
-echo "[HUSKY] pre-commit hook"
+yarn lint-staged
