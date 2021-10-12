@@ -1,9 +1,10 @@
 .*
 /node_modules
 .gitignore
-.yarn/
-.vscode/
-build/
+/.yarn
+/.vscode
+/build
+/src/__generated__
 DS_Store
 .env.local
 .env.development.local
