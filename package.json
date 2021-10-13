@@ -31,13 +31,13 @@
   },
   "scripts": {
     "convert-sass": "node sassToLess.js",
-    "start": "concurrently --kill-others \"yarn run relay && craco start\" \"yarn watch-sass\"",
+    "start": "concurrently --kill-others \"yarn run relay --watch\" \"craco start\" \"yarn watch-sass\"",
     "build": "yarn run relay && craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "format": "prettier --write .",
     "postinstall": "husky install",
-    "relay": "relay-compiler --watch $@",
+    "relay": "relay-compiler $@",
     "watch-sass": "nodemon --watch antd.customize.scss --exec \"yarn convert-sass && craco start\" --ext scss",
     "prepare": "husky install"
   },
@@ -77,10 +77,6 @@
     "relay-compiler-language-typescript": "^14.2.0",
     "relay-config": "^12.0.0",
     "sass": "^1.42.1"
-
-
-
-    
   },
   "lint-staged": {
     "*.{js,css,md,ts,tsx,json}": "prettier --write"
