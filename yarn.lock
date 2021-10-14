@@ -2991,7 +2991,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/history@npm:*":
+"@types/history@npm:*, @types/history@npm:^4.7.9":
   version: 4.7.9
   resolution: "@types/history@npm:4.7.9"
   checksum: 556b062adb92795839301965776b0418e9ca32798bd8a6031345a6a84d7512771107143a497b7e3ff826d0b0d4456e962c6450485dda6f55c7dd33371e840529
@@ -3145,6 +3145,17 @@ __metadata:
     "@types/react": "*"
     "@types/relay-runtime": "*"
   checksum: 8d0778db425498acd022f61a5ed5b09d0d8b40ef297911aeca46b06abc2195071cd55280114841b947798c5a43b37e32dab2bb109b080907d200e363c2c566c7
+  languageName: node
+  linkType: hard
+
+"@types/react-router-config@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "@types/react-router-config@npm:5.0.3"
+  dependencies:
+    "@types/history": "*"
+    "@types/react": "*"
+    "@types/react-router": "*"
+  checksum: 7024ac48ddbab674fee2dea1afcb63ee740ade6a1bf98e360d980c9fd87ea9251b84b0213d622344d4a0d44eb822888826c39c2cd5aa0d0213accaa7407da91b
   languageName: node
   linkType: hard
 
@@ -9049,7 +9060,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"history@npm:^4.9.0":
+"history@npm:4.10.1, history@npm:^4.9.0":
   version: 4.10.1
   resolution: "history@npm:4.10.1"
   dependencies:
@@ -15158,6 +15169,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"react-router-config@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "react-router-config@npm:5.1.1"
+  dependencies:
+    "@babel/runtime": ^7.1.2
+  peerDependencies:
+    react: ">=15"
+    react-router: ">=5"
+  checksum: bde7ee79444454bf7c3737fd9c5c268021012c8cc37bc19116b2e7daa28c4231598c275816c7f32c16f9f974dc707b91de279291a5e39efce2e1b1569355b87a
+  languageName: node
+  linkType: hard
+
 "react-router-dom@npm:^5.3.0":
   version: 5.3.0
   resolution: "react-router-dom@npm:5.3.0"
@@ -16446,11 +16469,13 @@ resolve@^2.0.0-next.3:
     "@testing-library/jest-dom": ^5.11.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10
+    "@types/history": ^4.7.9
     "@types/jest": ^26.0.15
     "@types/node": ^12.0.0
     "@types/react": ^17.0.0
     "@types/react-dom": ^17.0.0
     "@types/react-relay": ^11.0.2
+    "@types/react-router-config": ^5.0.3
     "@types/react-router-dom": ^5.3.1
     "@types/relay-runtime": ^12.0.0
     "@typescript-eslint/eslint-plugin": 2.x
@@ -16470,6 +16495,7 @@ resolve@^2.0.0-next.3:
     eslint-plugin-react: 7.x
     eslint-plugin-react-hooks: 2.x
     graphql: ^15.6.0
+    history: 4.10.1
     husky: ^7.0.0
     lint-staged: ^11.2.3
     nodemon: ^2.0.13
@@ -16477,6 +16503,7 @@ resolve@^2.0.0-next.3:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-relay: ^12.0.0
+    react-router-config: ^5.1.1
     react-router-dom: ^5.3.0
     react-scripts: 4.0.3
     relay-compiler: ^12.0.0
