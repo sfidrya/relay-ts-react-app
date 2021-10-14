@@ -15113,17 +15113,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-dom@npm:0.0.0-experimental-f42431abe":
-  version: 0.0.0-experimental-f42431abe
-  resolution: "react-dom@npm:0.0.0-experimental-f42431abe"
+"react-dom@npm:experimental":
+  version: 0.0.0-experimental-8ee4ff883-20211013
+  resolution: "react-dom@npm:0.0.0-experimental-8ee4ff883-20211013"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
-    prop-types: ^15.6.2
-    scheduler: 0.0.0-experimental-f42431abe
+    scheduler: 0.0.0-experimental-8ee4ff883-20211013
   peerDependencies:
-    react: 0.0.0-experimental-f42431abe
-  checksum: 6369cf0b0251bb1676953fbbf77b0b689c4dbe83fbd030e246482de3f4563ad169bbe56036c3f60c6c58b9148dbc68ce8cd5c74699a9e3608745ed610ea1068a
+    react: 0.0.0-experimental-8ee4ff883-20211013
+  checksum: 2516e3dbf7ffb567faf4c36a762f00344d6e546fdec370dff6b3b35edea8242736597f7ff5f90def47b2b10b42c442c13195edc659ef8cac126060fd20bfcb22
   languageName: node
   linkType: hard
 
@@ -15297,14 +15296,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react@npm:0.0.0-experimental-f42431abe":
-  version: 0.0.0-experimental-f42431abe
-  resolution: "react@npm:0.0.0-experimental-f42431abe"
+"react@npm:experimental":
+  version: 0.0.0-experimental-8ee4ff883-20211013
+  resolution: "react@npm:0.0.0-experimental-8ee4ff883-20211013"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
-    prop-types: ^15.6.2
-  checksum: 5e1a33ab7ae85f80bbbe824811420302d13dc22785859dc2e5acdc4be99464e12155d2cc17a496e5f45fbe5b96c4cda46d09d2e66862794d832bdf19de4c3ca1
+  checksum: 4245af438b6c5d908e2699adf64d9474234736b702f32f5c8f649233d56bc0207d027bd8c1076ad4a81ebd9b9bfdb5b476fcb91d3cfa8ce00f22e258bd64586b
   languageName: node
   linkType: hard
 
@@ -16215,13 +16213,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"scheduler@npm:0.0.0-experimental-f42431abe":
-  version: 0.0.0-experimental-f42431abe
-  resolution: "scheduler@npm:0.0.0-experimental-f42431abe"
+"scheduler@npm:0.0.0-experimental-8ee4ff883-20211013":
+  version: 0.0.0-experimental-8ee4ff883-20211013
+  resolution: "scheduler@npm:0.0.0-experimental-8ee4ff883-20211013"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
-  checksum: 562d1f47f338fa4ba202ce7fdfdd2e6ebf99544c7e80be4e294588dbce9ac549e26a2f74009799b649c3007a61ca1f3818f6bd2d2e0ca862cfd4e37cdca332d3
+  checksum: 92ae542128cf67fdf929046559658d094759cd0507be28c90e2d4db4b3ef1ad32f6c4ddef0c836db9e18d99df4162a7e511afd02107f7f805f23dd4c822e9e76
   languageName: node
   linkType: hard
 
@@ -16502,8 +16500,8 @@ resolve@^2.0.0-next.3:
     lint-staged: ^11.2.3
     nodemon: ^2.0.13
     prettier: 2.4.1
-    react: 0.0.0-experimental-f42431abe
-    react-dom: 0.0.0-experimental-f42431abe
+    react: experimental
+    react-dom: experimental
     react-relay: ^12.0.0
     react-router-config: ^5.1.1
     react-router-dom: ^5.3.0
