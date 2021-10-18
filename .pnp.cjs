@@ -45,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.24"],
             ["@types/react-dom", "npm:17.0.9"],
             ["@types/react-relay", "npm:11.0.2"],
+            ["@types/react-router", "npm:5.1.17"],
             ["@types/react-router-config", "npm:5.0.3"],
             ["@types/react-router-dom", "npm:5.3.1"],
             ["@types/relay-runtime", "npm:12.0.0"],
@@ -73,6 +74,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:17.0.2"],
             ["react-relay", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:12.0.0"],
+            ["react-router", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:5.2.1"],
             ["react-router-config", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:5.1.1"],
             ["react-router-dom", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:5.3.0"],
             ["react-scripts", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:4.0.3"],
@@ -16459,10 +16461,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:22cfc317c84be69b7b8ad31a12c530fad15fb8dfc0ea5c8804764224edb918806076a680040596f3f361a9b5aae704a81d96373553ada85132b6b71316fd9576#npm:0.4.1", {
-          "packageLocation": "./.yarn/__virtual__/mini-create-react-context-virtual-7c5d791631/0/cache/mini-create-react-context-npm-0.4.1-06f382591b-f8cb2c7738.zip/node_modules/mini-create-react-context/",
+        ["virtual:be6aa6d5b4dfd20a1477fb7c689304b7240dbf694ff8bdeb4da9713480b9753456aa3f732fd7703a877379041624cd833f536d3394eb221655cda8edb178465d#npm:0.4.1", {
+          "packageLocation": "./.yarn/__virtual__/mini-create-react-context-virtual-481c6b1030/0/cache/mini-create-react-context-npm-0.4.1-06f382591b-f8cb2c7738.zip/node_modules/mini-create-react-context/",
           "packageDependencies": [
-            ["mini-create-react-context", "virtual:22cfc317c84be69b7b8ad31a12c530fad15fb8dfc0ea5c8804764224edb918806076a680040596f3f361a9b5aae704a81d96373553ada85132b6b71316fd9576#npm:0.4.1"],
+            ["mini-create-react-context", "virtual:be6aa6d5b4dfd20a1477fb7c689304b7240dbf694ff8bdeb4da9713480b9753456aa3f732fd7703a877379041624cd833f536d3394eb221655cda8edb178465d#npm:0.4.1"],
             ["@babel/runtime", "npm:7.15.4"],
             ["@types/prop-types", null],
             ["@types/react", "npm:17.0.24"],
@@ -20619,16 +20621,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:95f9041017c3408fe6b5f477fa8ac502db2e6582a3bfd1ca48cb194a513ab151a351bb56a54f498ad8ec1bc84ca6ffa68dcc804fd87a65d04a3597fc0d550094#npm:5.2.1", {
-          "packageLocation": "./.yarn/__virtual__/react-router-virtual-22cfc317c8/0/cache/react-router-npm-5.2.1-ea754d7473-7daae084bf.zip/node_modules/react-router/",
+        ["virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:5.2.1", {
+          "packageLocation": "./.yarn/__virtual__/react-router-virtual-be6aa6d5b4/0/cache/react-router-npm-5.2.1-ea754d7473-7daae084bf.zip/node_modules/react-router/",
           "packageDependencies": [
-            ["react-router", "virtual:95f9041017c3408fe6b5f477fa8ac502db2e6582a3bfd1ca48cb194a513ab151a351bb56a54f498ad8ec1bc84ca6ffa68dcc804fd87a65d04a3597fc0d550094#npm:5.2.1"],
+            ["react-router", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:5.2.1"],
             ["@babel/runtime", "npm:7.15.4"],
             ["@types/react", "npm:17.0.24"],
             ["history", "npm:4.10.1"],
             ["hoist-non-react-statics", "npm:3.3.2"],
             ["loose-envify", "npm:1.4.0"],
-            ["mini-create-react-context", "virtual:22cfc317c84be69b7b8ad31a12c530fad15fb8dfc0ea5c8804764224edb918806076a680040596f3f361a9b5aae704a81d96373553ada85132b6b71316fd9576#npm:0.4.1"],
+            ["mini-create-react-context", "virtual:be6aa6d5b4dfd20a1477fb7c689304b7240dbf694ff8bdeb4da9713480b9753456aa3f732fd7703a877379041624cd833f536d3394eb221655cda8edb178465d#npm:0.4.1"],
             ["path-to-regexp", "npm:1.8.0"],
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
@@ -20657,9 +20659,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router-config", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:5.1.1"],
             ["@babel/runtime", "npm:7.15.4"],
             ["@types/react", "npm:17.0.24"],
-            ["@types/react-router", null],
+            ["@types/react-router", "npm:5.1.17"],
             ["react", "npm:17.0.2"],
-            ["react-router", null]
+            ["react-router", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:5.2.1"]
           ],
           "packagePeers": [
             "@types/react-router",
@@ -20688,7 +20690,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["loose-envify", "npm:1.4.0"],
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
-            ["react-router", "virtual:95f9041017c3408fe6b5f477fa8ac502db2e6582a3bfd1ca48cb194a513ab151a351bb56a54f498ad8ec1bc84ca6ffa68dcc804fd87a65d04a3597fc0d550094#npm:5.2.1"],
+            ["react-router", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:5.2.1"],
             ["tiny-invariant", "npm:1.1.0"],
             ["tiny-warning", "npm:1.0.3"]
           ],
@@ -22100,6 +22102,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.24"],
             ["@types/react-dom", "npm:17.0.9"],
             ["@types/react-relay", "npm:11.0.2"],
+            ["@types/react-router", "npm:5.1.17"],
             ["@types/react-router-config", "npm:5.0.3"],
             ["@types/react-router-dom", "npm:5.3.1"],
             ["@types/relay-runtime", "npm:12.0.0"],
@@ -22128,6 +22131,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:17.0.2"],
             ["react-relay", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:12.0.0"],
+            ["react-router", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:5.2.1"],
             ["react-router-config", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:5.1.1"],
             ["react-router-dom", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:5.3.0"],
             ["react-scripts", "virtual:0ef37de7fb5516c3f2118e7808d33680c7d454a5133c6a126febc11e6b7744f0a66fd3da9d4ecca2776c55408ee5b2a9fc3763d198cec8c44b4d0bd040b27674#npm:4.0.3"],

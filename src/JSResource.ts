@@ -10,8 +10,13 @@ const resourceMap = new Map()
  * A generic resource: given some method to asynchronously load a value - the loader()
  * argument - it allows accessing the state of the resource.
  */
-class Resource {
-  constructor(loader) {
+export class Resource<T> {
+  _error: Error | null
+  _loader: () => Promise<T>
+  _promise: Promise<T> | null
+  _result: T | null
+
+  constructor(loader: () => Promise<T>) {
     this._error = null
     this._loader = loader
     this._promise = null
@@ -26,8 +31,10 @@ class Resource {
     if (promise == null) {
       promise = this._loader()
         .then((result) => {
-          if (result.default) {
-            result = result.default
+          // Result is a JS module
+          // If there is a default export, return default export
+          if ((result as any).default) {
+            result = (result as any).default
           }
           this._result = result
           return result
@@ -87,7 +94,10 @@ class Resource {
  * @param {*} moduleId A globally unique identifier for the resource used for caching
  * @param {*} loader A method to load the resource's data if necessary
  */
-export default function JSResource(moduleId, loader) {
+export default function JSResource<T>(
+  moduleId: string,
+  loader: () => Promise<T>
+) {
   let resource = resourceMap.get(moduleId)
   if (resource == null) {
     resource = new Resource(loader)

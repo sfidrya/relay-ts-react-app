@@ -1,5 +1,14 @@
-import { BrowserHistoryBuildOptions, createBrowserHistory } from 'history'
+import { ResultType } from 'antd/lib/result'
+import {
+  BrowserHistoryBuildOptions,
+  createBrowserHistory,
+  LocationListener,
+} from 'history'
 import { matchRoutes, RouteConfig } from 'react-router-config'
+import JSResource, { Resource } from '../JSResource'
+
+export type Router = ReturnType<typeof createRouter>
+export type RouterContext = Router['context']
 
 /**
  * A custom router built from the same primitives as react-router. Each object in `routes`
@@ -52,14 +61,19 @@ export default function createRouter(
     preloadCode(pathname: string) {
       // preload just the code for a route, without storing the result
       const matches = matchRoutes(routes, pathname)
-      matches.forEach(({ route }) => route.component?.load())
+      matches.forEach(({ route }) => {
+        const component = route.component
+        if (component instanceof Resource) {
+          component?.load()
+        }
+      })
     },
     preload(pathname: string) {
       // preload the code and data for a route, without storing the result
       const matches = matchRoutes(routes, pathname)
       prepareMatches(matches)
     },
-    subscribe(cb) {
+    subscribe(cb: unknown) {
       const id = nextId++
       const dispose = () => {
         subscribers.delete(id)
@@ -76,7 +90,7 @@ export default function createRouter(
 /**
  * Match the current location to the corresponding route entry.
  */
-function matchRoute(routes, location) {
+function matchRoute(routes: RouteConfig[], location: { pathname: string }) {
   const matchedRoutes = matchRoutes(routes, location.pathname)
   if (!Array.isArray(matchedRoutes) || matchedRoutes.length === 0) {
     throw new Error('No route for ' + location.pathname)
@@ -87,7 +101,7 @@ function matchRoute(routes, location) {
 /**
  * Load the data for the matched route, given the params extracted from the route
  */
-function prepareMatches(matches) {
+function prepareMatches(matches: any[]) {
   return matches.map((match) => {
     const { route, match: matchData } = match
     const prepared = route.prepare(matchData.params)
