@@ -1,3 +1,6 @@
+import { Component } from 'react'
+import { RouteComponentProps } from 'react-router'
+
 /**
  * A cache of resources to avoid loading the same module twice. This is important
  * because Webpack dynamic imports only expose an asynchronous API for loading
@@ -10,13 +13,13 @@ const resourceMap = new Map()
  * A generic resource: given some method to asynchronously load a value - the loader()
  * argument - it allows accessing the state of the resource.
  */
-export class Resource<T> {
+export class Resource<Module extends { default?: Component }> {
   _error: Error | null
-  _loader: () => Promise<T>
-  _promise: Promise<T> | null
-  _result: T | null
+  _loader: () => Promise<Module>
+  _promise: Promise<Component> | null
+  _result: Component | null
 
-  constructor(loader: () => Promise<T>) {
+  constructor(loader: () => Promise<Module>) {
     this._error = null
     this._loader = loader
     this._promise = null
@@ -33,11 +36,12 @@ export class Resource<T> {
         .then((result) => {
           // Result is a JS module
           // If there is a default export, return default export
-          if ((result as any).default) {
-            result = (result as any).default
+          if (!result.default) {
+            throw new Error('Module should have default export')
           }
-          this._result = result
-          return result
+          const component = result.default
+          this._result = component
+          return component
         })
         .catch((error) => {
           this._error = error
@@ -94,9 +98,9 @@ export class Resource<T> {
  * @param {*} moduleId A globally unique identifier for the resource used for caching
  * @param {*} loader A method to load the resource's data if necessary
  */
-export default function JSResource<T>(
+export default function JSResource<Module>(
   moduleId: string,
-  loader: () => Promise<T>
+  loader: () => Promise<Module>
 ) {
   let resource = resourceMap.get(moduleId)
   if (resource == null) {

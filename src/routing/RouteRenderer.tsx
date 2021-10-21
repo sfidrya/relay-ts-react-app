@@ -109,7 +109,7 @@ export default function RouterRenderer() {
   )
 }
 
-interface RouteComponentProps {
+export interface RouteComponentProps {
   component: any
   prepared: unknown
   routeData: unknown

@@ -5,8 +5,8 @@ import RelayEnvironment from './RelayEnvironment'
 const routes = [
   {
     component: JSResource('Root', () => import('./pages/Root')),
-    /*prepare: params => {
-      const RootQuery = require('./__generated__/RootQuery.graphql');
+    prepare: () => {
+      const RootQuery = require('./__generated__/RootQuery.graphql')
       return {
         rootQuery: loadQuery(
           RelayEnvironment,
@@ -18,10 +18,10 @@ const routes = [
           // The fetchPolicy allows us to specify whether to render from cached
           // data if possible (store-or-network) or only fetch from network
           // (network-only).
-          { fetchPolicy: 'store-or-network' },
+          { fetchPolicy: 'store-or-network' }
         ),
-      };
-    },*/
+      }
+    },
     routes: [
       {
         path: '/:user',
