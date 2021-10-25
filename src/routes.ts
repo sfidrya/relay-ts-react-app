@@ -1,3 +1,4 @@
+import { Module } from 'history'
 import { loadQuery } from 'react-relay'
 import JSResource from './JSResource'
 import RelayEnvironment from './RelayEnvironment'
@@ -6,6 +7,7 @@ import RelayEnvironment from './RelayEnvironment'
 
 const routes = [
   {
+    component: JSResource('Root', () => import('./components/Root')),
     prepare: () => {
       const RootQuery = require('./__generated__/AppRepositoryNameQuery.graphql')
       return {
@@ -23,20 +25,98 @@ const routes = [
         ),
       }
     },
-    component: JSResource('Root', () => import('./pages/Root')),
     routes: [
+      // {
+      //   path: '/',
+      //   exact: true,
+      //   component: JSResource('Overview', () => import('./pages/Overview')),
+      //   prepare: () => {
+      //     const RootQuery = require('./__generated__/AppRepositoryNameQuery.graphql')
+      //     return {
+      //       rootQuery: loadQuery(
+      //         RelayEnvironment,
+      //         RootQuery,
+      //         {
+      //           owner: 'facebook',
+      //           name: 'relay',
+      //         },
+      //         // The fetchPolicy allows us to specify whether to render from cached
+      //         // data if possible (store-or-network) or only fetch from network
+      //         // (network-only).
+      //         { fetchPolicy: 'store-or-network' }
+      //       ),
+      //     }
+      //   },
+      // },
       {
+        prepare: () => {
+          const RootQuery = require('./__generated__/AppRepositoryNameQuery.graphql')
+          return {
+            rootQuery: loadQuery(
+              RelayEnvironment,
+              RootQuery,
+              {
+                owner: 'facebook',
+                name: 'relay',
+              },
+              // The fetchPolicy allows us to specify whether to render from cached
+              // data if possible (store-or-network) or only fetch from network
+              // (network-only).
+              { fetchPolicy: 'store-or-network' }
+            ),
+          }
+        },
         path: '/:user',
         exact: true,
-        component: JSResource('Overview', () => import('./pages/Overview')),
+        component: JSResource(
+          'Overview',
+          () => import('./components/Overview')
+        ),
       },
       {
+        prepare: () => {
+          const RootQuery = require('./__generated__/AppRepositoryNameQuery.graphql')
+          return {
+            rootQuery: loadQuery(
+              RelayEnvironment,
+              RootQuery,
+              {
+                owner: 'facebook',
+                name: 'relay',
+              },
+              // The fetchPolicy allows us to specify whether to render from cached
+              // data if possible (store-or-network) or only fetch from network
+              // (network-only).
+              { fetchPolicy: 'store-or-network' }
+            ),
+          }
+        },
         path: '/:user/stars',
-        component: JSResource('Stars', () => import('./pages/Stars')),
+        component: JSResource('Stars', () => import('./components/Stars')),
       },
       {
+        prepare: () => {
+          const RootQuery = require('./__generated__/AppRepositoryNameQuery.graphql')
+          return {
+            rootQuery: loadQuery(
+              RelayEnvironment,
+              RootQuery,
+              {
+                owner: 'facebook',
+                name: 'relay',
+              },
+              // The fetchPolicy allows us to specify whether to render from cached
+              // data if possible (store-or-network) or only fetch from network
+              // (network-only).
+              { fetchPolicy: 'store-or-network' }
+            ),
+          }
+        },
         path: '/:user/followers',
-        component: JSResource('Followers', () => import('./pages/Followers')),
+        component: JSResource(
+          'Followers',
+          () => import('./components/Followers')
+        ),
       },
     ],
   },
