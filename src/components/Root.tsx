@@ -10,7 +10,7 @@ export default function Root(props: RootComponentProps) {
     <div>
       <p>Root component</p>
       {props.children}
-      <Link to="/stars">Test Link</Link>
+      <Link to="/mockuser">User overview Link</Link>
     </div>
   )
 }
