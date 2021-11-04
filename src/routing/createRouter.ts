@@ -4,11 +4,17 @@ import {
   createBrowserHistory,
   LocationListener,
 } from 'history'
-import { matchRoutes, RouteConfig } from 'react-router-config'
+import { ComponentType } from 'react'
+import {
+  matchRoutes,
+  RouteConfig,
+  RouteConfigComponentProps,
+} from 'react-router-config'
 import JSResource, { Resource } from '../JSResource'
 
 export type Router = ReturnType<typeof createRouter>
 export type RouterContext = Router['context']
+type subscribeCallback = (nextAntry: any) => void
 
 /**
  * A custom router built from the same primitives as react-router. Each object in `routes`
@@ -16,8 +22,20 @@ export type RouterContext = Router['context']
  * The router watches for changes to the current location via the `history` package, maps the
  * location to the corresponding route entry, and then preloads the code and data for the route.
  */
+
+interface Routes extends RouteConfig {
+  component:
+    | ComponentType<RouteConfigComponentProps<any>>
+    | ComponentType<{}>
+    | undefined
+  path?: string
+  exact?: boolean
+  prepare: () => void
+  routes?: Routes[]
+}
+
 export default function createRouter(
-  routes: RouteConfig[],
+  routes: Array<Routes>, //RouteConfig[],
   options?: BrowserHistoryBuildOptions
 ) {
   // Initialize history
@@ -49,7 +67,7 @@ export default function createRouter(
       entries,
     }
     currentEntry = nextEntry
-    subscribers.forEach((cb) => cb(nextEntry))
+    subscribers.forEach((cb: subscribeCallback) => cb(nextEntry))
   })
 
   // The actual object that will be passed on the RoutingConext.
@@ -73,7 +91,7 @@ export default function createRouter(
       const matches = matchRoutes(routes, pathname)
       prepareMatches(matches)
     },
-    subscribe(cb: unknown) {
+    subscribe(cb: subscribeCallback) {
       const id = nextId++
       const dispose = () => {
         subscribers.delete(id)
