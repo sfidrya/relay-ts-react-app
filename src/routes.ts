@@ -118,6 +118,31 @@ const routes = [
           () => import('./components/Followers')
         ),
       },
+      {
+        prepare: () => {
+          const RootQuery = require('./__generated__/AppRepositoryNameQuery.graphql')
+          return {
+            rootQuery: loadQuery(
+              RelayEnvironment,
+              RootQuery,
+              {
+                owner: 'facebook',
+                name: 'relay',
+              },
+              // The fetchPolicy allows us to specify whether to render from cached
+              // data if possible (store-or-network) or only fetch from network
+              // (network-only).
+              { fetchPolicy: 'store-or-network' }
+            ),
+          }
+        },
+        path: '/:user/achievements',
+        exact: true,
+        component: JSResource(
+          'Achievements',
+          () => import('./components/Achievements')
+        ),
+      },
     ],
   },
 ]
